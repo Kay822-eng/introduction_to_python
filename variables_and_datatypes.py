@@ -10,9 +10,10 @@ print(type(var_2))
 print(type(var_3))
 
 #Challenge 2
-str1=str(input("Enter a string:"))
+str1=str(input("Enter a number:"))
+print(str1)
 c=(int(str1))
-print(c)
+print(f"The integer value is {c}")
 
 #Challenge 3
 name="Kayla"
@@ -21,39 +22,53 @@ myInfo=f"My name is {name} and I am {age} years old"
 print(myInfo)
 
 #Challenge 4
-my_Hobbies=["Art","Handball","Basketball","Baking","Cooking"]
-c=(type(my_Hobbies[0]))
-d=(type(my_Hobbies[1]))
-e=(type(my_Hobbies[2]))
-f=(type(my_Hobbies[3]))
-g=(type(my_Hobbies[4]))
-print(c,d,e,f,g)
+my_Hobbies=["Art",5,68.7,956,9+6j]
+for a in my_Hobbies:
+    print(type(a))
 
 #Challenge 5
-myDict={
+from types import SimpleNamespace
+'''myDict={
     "name":"Kayla",
     "age":14,
     "city":"Tipton"
-}
+}'''
+myDict=SimpleNamespace(name="Kayla",age=14,city="Tipton")
 print(myDict)
 
+
 #Challenge 6
-myName="Kayla"
-print(myName)
-myName="Cindy"
-print(myName)
+var_1=5
+var_2=10
+print(f"Before swapping var_1 = {var_1} and var_2 = {var_2}")
+var_1,var_2=var_2,var_1
+print(f"After swapping var_1 = {var_1} and var_2 = {var_2}")
 
 #Challenge 7
+DAYS_IN_WEEK=7
+print(DAYS_IN_WEEK)
 
 #Challenge 8
-Random=9
-print(type(Random))
+def check_type(var):
+    if isinstance(var, int):
+        print("The variable is of type int.")
+    elif isinstance(var, float):
+        print("The variable is of type float.")
+    elif isinstance(var, str):
+        print("The variable is of type str.")
+    else:
+        print("Unknown type.")
+
+check_type(10)
+check_type(3.14)
+check_type("Hello")
+check_type([10,3.14,"Hello"])
 
 #Challenge 9
-myDict[age]=9
+myDict.age=9
 print(myDict)
 
 #Challenge 10
 myFoods=["cheese","beans","potatoes","tomatoes","lamb"]
 print(myFoods[0])
-print(myFoods[4])
+print(myFoods[-1])
