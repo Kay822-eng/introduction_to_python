@@ -36,7 +36,7 @@ for x in range(1,11):
 #Challenge 6
 list1=["eggs","bread","fish"],
 list2=[23,76,934]
-print(list2[3])
+print(list2[2]) #corrected index error from 3 to 2
 
 #Challenge 7
 yDict={
