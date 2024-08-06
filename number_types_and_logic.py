@@ -48,10 +48,12 @@ print(Max1,Min1)
 n=5
 
 #Challenge 10
+x= 8
 def factorial(x):
     x=int(input("Enter a number:"))
     if x==0:
         return 1
     else:
         return x*factorial(x-1)
-print('Factorial:',factorial(x))
+        
+print('Factorial:',factorial(80)) #error fixed name error corrected x to 80
